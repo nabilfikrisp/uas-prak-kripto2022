@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: aqua;
+  width: 70vw;
+  margin: auto;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; */
+}
+
+label {
+  display: block;
+}
+
+.text {
+  display: block;
+}
+
+.key {
+  display: block;
+}
+
+.decodeDiv {
+  display: none;
+}

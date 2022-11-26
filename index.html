@@ -7,11 +7,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 
+
+
+  <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+    integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+    crossorigin="anonymous"></script>
+
+
+
   <title>Cipher Cipher</title>
 </head>
 
 <body>
-  <h1 class="judul">putang ina</h1>
+  <div class="container">
+    <h1 class="judul">Vigener Cipher</h1>
+    <button onclick="showEncode()">Encode</button>
+    <button onclick="showDecode()">Decode</button>
+
+    <label for="text">Input text:</label>
+    <textarea id="text" class="text" name="text" rows="5" cols="33">Input text here...
+      </textarea>
+    <label for="key">Input key:</label>
+
+    <input type="text" name="key" id="key" class="key" placeholder="Input key here..." style="text-transform:uppercase">
+    <button class="encodeDiv" onclick="encode()">Encode</button>
+    <button class="decodeDiv" onclick="decode()">Decode</button>
+
+    <div class="resultBox">
+      <label for="result">Result:</label>
+      <textarea id="result" class="result" name="result" rows="5" cols="33">
+      </textarea>
+    </div>
+  </div>
 </body>
 <script src="script.js"></script>
 
