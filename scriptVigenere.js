@@ -146,14 +146,14 @@ function decode() {
     // console.log(text.charCodeAt(i));
     // console.log(key.charCodeAt(i));
     calculated = (text.charCodeAt(i) - key.charCodeAt(i));
-    if(calculated < 0){
-      
+    if (calculated < 0) {
+
       calculated = 26 + calculated;
       console.log(text.charCodeAt(i));
       console.log(key.charCodeAt(i));
       console.log(calculated);
     }
-    calculated = calculated ;
+    calculated = calculated;
 
 
     cipherText += String.fromCharCode(calculated + 97);
@@ -171,17 +171,33 @@ function decode() {
   result.innerHTML = cipherText;
 }
 
-function process(){
-  let encodeBtn = document.querySelector('#showEncode')
-  let decodeBtn = document.querySelector('#showDecode')
-
-  if(encodeBtn.checked){
+function process() {
+  let encodeBtn = document.querySelector('#showEncode');
+  let decodeBtn = document.querySelector('#showDecode');
+  if (encodeBtn.checked) {
     encode()
   }
-  if(decodeBtn.checked){
+  if (decodeBtn.checked) {
     decode()
   }
 }
+
+function changeLabel() {
+  let textLabel = document.querySelector('.text-label');
+  let resultLabel = document.querySelector('.result-label');
+  let encodeBtn = document.querySelector('#showEncode');
+  let decodeBtn = document.querySelector('#showDecode');
+  if (encodeBtn.checked) {
+    textLabel.innerHTML = 'PlainText:';
+    resultLabel.innerHTML = 'CipherText:';
+  }
+  if (decodeBtn.checked) {
+    textLabel.innerHTML = 'CipherText:';
+    resultLabel.innerHTML = 'PlainText:';
+  }
+
+}
+
 
 // function showEncode() {
 //   const encodeDiv = document.querySelector('.encodeDiv');

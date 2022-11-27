@@ -25,6 +25,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 .row{
@@ -34,12 +36,14 @@ html, body {
 
 .page{
   background-color: #D6E4E5;
-  margin: 30px;
-  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  margin-top: 100px;
+  width: 100vw;
+  margin-top: -40vh;
 }
 
 
@@ -51,7 +55,7 @@ html, body {
   color: #EB6440;
 }
 
-.label{
+.result-label, .text-label{
   text-align: center;
   font-family: viga;
   font-size: 36;
@@ -75,9 +79,10 @@ textarea {
   border-radius: 20px;
   background-color: #ffff;
   font-size: 16px;
-  text-transform: uppercase;
+
   outline: none;
 }
+
 
 .key{
   margin-top: 10px;
@@ -155,17 +160,17 @@ textarea {
 input[type="radio"]{
   display: none;
 }
-#encrypt:checked:checked ~ .encrypt,
-#decrypt:checked:checked ~ .decrypt{
+.encryptInput:checked:checked ~ .encrypt,
+.decryptInput:checked:checked ~ .decrypt{
   border-color: #497174;
   background: #497174;
 }
-#encrypt:checked:checked ~ .encrypt .dot,
-#decrypt:checked:checked ~ .decrypt .dot{
+.encryptInput:checked:checked ~ .encrypt .dot,
+.decryptInput:checked:checked ~ .decrypt .dot{
   background: #fff;
 }
-#encrypt:checked:checked ~ .encrypt .dot::before,
-#decrypt:checked:checked ~ .decrypt .dot::before{
+.encryptInput:checked:checked ~ .encrypt .dot::before,
+.decryptInput:checked:checked ~ .decrypt .dot::before{
   opacity: 1;
   transform: scale(1);
 }
@@ -173,8 +178,8 @@ input[type="radio"]{
   font-size: 20px;
   color: #808080;
 }
-#encrypt:checked:checked ~ .encrypt span,
-#decrypt:checked:checked ~ .decrypt span{
+.encryptInput:checked:checked ~ .encrypt span,
+.decryptInput:checked:checked ~ .decrypt span{
   color: #fff;
 }
 
@@ -217,3 +222,101 @@ a {
   display: block;
 }
 
+.next-link {
+  display: block;
+  text-align: center;
+  font-family: viga;
+}
+
+.underline{
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  text-decoration: none;
+}
+
+.underline::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0074D9;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .underline:hover::before{
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px!important;
+  }
+  .text {
+    width: 70vw;
+    margin: 0!important;
+    padding: 0!important;
+  }
+  .key-container {
+    display: block!important;
+    box-sizing: content-box;
+    width: 100vw!important;
+  }
+  .key-box {
+    width: 80vw;
+    margin: auto;
+  }
+
+  .key {
+    margin: auto;
+  }
+  .result-box {
+    width: 100vw;
+    margin: auto;
+    margin-bottom: 20px!important;
+  }
+
+  .result-box textarea{
+    width: 70vw;
+    padding: 12px!important;
+    resize: none;
+    height: 100px!important;
+  }
+  .result-box label {
+    display: block;
+  }
+  .text-label{
+    display: block!important;
+    width: 100vw;
+  }
+  .text-box {
+    display: block!important;
+    box-sizing: content-box;
+    width: 100vw;
+    margin: auto;
+  }
+
+  .text-box textarea{
+    width: 70vw;
+    margin: auto!important;
+    padding: 12px!important;
+    resize: none;
+    height: 100px!important;
+  }
+
+  .judul{
+    margin: auto;
+  }
+}
