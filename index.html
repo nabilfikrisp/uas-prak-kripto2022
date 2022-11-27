@@ -21,8 +21,8 @@
 <body>
   <div class="container">
     <h1 class="judul">Vigener Cipher</h1>
-    <button onclick="showEncode()">Encode</button>
-    <button onclick="showDecode()">Decode</button>
+    <!-- <button onclick="showEncode()">Encode</button>
+    <button onclick="showDecode()">Decode</button> -->
 
     <label for="text">Input text:</label>
     <textarea id="text" class="text" name="text" rows="5" cols="33">Input text here...
@@ -30,11 +30,19 @@
     <label for="key">Input key:</label>
 
     <input type="text" name="key" id="key" class="key" placeholder="Input key here..." style="text-transform:uppercase">
-    <button class="encodeDiv" onclick="encode()">Encode</button>
-    <button class="decodeDiv" onclick="decode()">Decode</button>
+    <div>
+      <input type="radio" onclick="showEncode()" id="showEncode" name="option">
+      <label for="showEncode">Encode</label>
+      <input type="radio" onclick="showDecode()" id="showDecode" name="option">
+      <label for="showDecode">Decode</label>
+    </div>
+
+    <!-- <button class="encodeDiv" onclick="encode()">Encode</button>
+    <button class="decodeDiv" onclick="decode()">Decode</button> -->
+    <button class="process" onclick="process()">Process</button>
 
     <div class="resultBox">
-      <label for="result">Result:</label>
+      <label for="result" >Result:</label>
       <textarea id="result" class="result" name="result" rows="5" cols="33">
       </textarea>
     </div>

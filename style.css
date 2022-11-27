@@ -13,7 +13,7 @@ html, body {
   flex-direction: column; */
 }
 
-label {
+.resultBox label {
   display: block;
 }
 
@@ -28,3 +28,4 @@ label {
 .decodeDiv {
   display: none;
 }
+
