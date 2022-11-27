@@ -1,16 +1,200 @@
+/* Font Settings */
+@font-face {
+  font-family: 'viga';
+  src: url('Font/Viga-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'oxyL';
+  src: url('Font/Oxygen-Light.ttf');
+}
+
+@font-face {
+  font-family: 'oxyR';
+  src: url('Font/Oxygen-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'oxyB';
+  src: url('Font/Oxygen-Bold.ttf');
+}
+
+
+/* General Settings */
+
 html, body {
   margin: 0;
   padding: 0;
 }
 
+.row{
+  /* border: 1px solid #111; */
+  text-align: center;
+}
+
+.page{
+  background-color: #D6E4E5;
+  margin: 30px;
+  margin-top: 50px;
+}
+
 .container {
-  background-color: aqua;
-  width: 70vw;
-  margin: auto;
-  /* display: flex;
+  margin-top: 100px;
+}
+
+
+/* Text Settings */
+.judul {
+  text-align: center;
+  font-family: viga;
+  font-size: 52;
+  color: #EB6440;
+}
+
+.label{
+  text-align: center;
+  font-family: viga;
+  font-size: 36;
+  color: #EB6440;
+}
+
+label.keylabel{
+  font-family: oxyR;
+  color: #497174;
+  font-size: 24px;
+  text-shadow: 1px 2px 6px #4b4b4b;
+}
+
+/* Component Settings */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ffff;
+  border-radius: 20px;
+  background-color: #ffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.key{
+  margin-top: 10px;
+  margin-left:auto;
+  margin-right:auto;
+  height: 60px;
+  width: 80%;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 2px solid #D6E4E5;
+  border-radius: 20px;
+  background-color: #ffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: inset 2px 2px 5px #D6E4E5, inset 2px 2px 4px #4b4b4b;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.key:hover{
+  box-shadow:  inset 1px 1px 2px #D6E4E5, inset -1px -1px 2px #D6E4E5;
+}
+
+
+.wrapper{
+  display: inline-flex;
+  background: #497174;
+  height: 50px;
+  width: 80%;
   align-items: center;
-  justify-content: center;
-  flex-direction: column; */
+  justify-content: space-evenly;
+  border-radius: 25px;
+  padding: 2px;
+  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+}
+.wrapper .option{
+  background: #fff;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  
+  /* margin: 10px; */
+  border-radius: 25px;
+  cursor: pointer;
+  /* padding: 0 10px; */
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #497174;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#encrypt:checked:checked ~ .encrypt,
+#decrypt:checked:checked ~ .decrypt{
+  border-color: #497174;
+  background: #497174;
+}
+#encrypt:checked:checked ~ .encrypt .dot,
+#decrypt:checked:checked ~ .decrypt .dot{
+  background: #fff;
+}
+#encrypt:checked:checked ~ .encrypt .dot::before,
+#decrypt:checked:checked ~ .decrypt .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#encrypt:checked:checked ~ .encrypt span,
+#decrypt:checked:checked ~ .decrypt span{
+  color: #fff;
+}
+
+/* Setting Button */
+
+.btn-input{
+  margin: 20px auto;
+  margin-top: 50px;
+  width: 80%;
+  padding: 10px;
+  border: #fff;
+  border-radius: 30px;
+  color:#fff;
+  background-color:#497174;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px white,  5px 5px 20px #497174;
+  cursor: pointer;
+}
+.btn-input:hover{
+  box-shadow: -2px -2px 5px white, 2px 2px 5px #BABECC;
 }
 
 .resultBox label {
