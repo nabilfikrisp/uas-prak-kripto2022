@@ -29,3 +29,7 @@ html, body {
   display: none;
 }
 
+a {
+  display: block;
+}
+

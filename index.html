@@ -6,27 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-
-
-
   <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
     integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
     crossorigin="anonymous"></script>
-
-
-
   <title>Cipher Cipher</title>
 </head>
 
 <body>
   <div class="container">
-    <h1 class="judul">Vigener Cipher</h1>
-    <!-- <button onclick="showEncode()">Encode</button>
-    <button onclick="showDecode()">Decode</button> -->
+    <h1 class="judul">Vigenere Cipher</h1>
 
     <label for="text">Input text:</label>
-    <textarea id="text" class="text" name="text" rows="5" cols="33">Input text here...
-      </textarea>
+    <textarea id="text" class="text" name="text" rows="5" cols="33">Input text here...</textarea>
     <label for="key">Input key:</label>
 
     <input type="text" name="key" id="key" class="key" placeholder="Input key here..." style="text-transform:uppercase">
@@ -37,17 +28,16 @@
       <label for="showDecode">Decode</label>
     </div>
 
-    <!-- <button class="encodeDiv" onclick="encode()">Encode</button>
-    <button class="decodeDiv" onclick="decode()">Decode</button> -->
     <button class="process" onclick="process()">Process</button>
 
     <div class="resultBox">
-      <label for="result" >Result:</label>
+      <label for="result">Result:</label>
       <textarea id="result" class="result" name="result" rows="5" cols="33">
       </textarea>
     </div>
+    <a href="columnar.html">columnar cipher</a>
   </div>
 </body>
-<script src="script.js"></script>
+<script src="scriptVigenere.js"></script>
 
 </html>
