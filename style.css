@@ -1,68 +1,71 @@
 /* Font Settings */
 @font-face {
-  font-family: 'viga';
-  src: url('Font/Viga-Regular.ttf');
+  font-family: "viga";
+  src: url("Font/Viga-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'oxyL';
-  src: url('Font/Oxygen-Light.ttf');
+  font-family: "oxyL";
+  src: url("Font/Oxygen-Light.ttf");
 }
 
 @font-face {
-  font-family: 'oxyR';
-  src: url('Font/Oxygen-Regular.ttf');
+  font-family: "oxyR";
+  src: url("Font/Oxygen-Regular.ttf");
 }
 
 @font-face {
-  font-family: 'oxyB';
-  src: url('Font/Oxygen-Bold.ttf');
+  font-family: "oxyB";
+  src: url("Font/Oxygen-Bold.ttf");
 }
-
 
 /* General Settings */
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100vh;
   width: 100vw;
 }
 
-.row{
+.row {
   /* border: 1px solid #111; */
   text-align: center;
 }
 
-.page{
-  background-color: #D6E4E5;
+.page {
+  background-color: #d6e4e5;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
   width: 100vw;
-  margin-top: -40vh;
+  margin-top: 10vh;
 }
-
 
 /* Text Settings */
 .judul {
   text-align: center;
   font-family: viga;
   font-size: 52;
-  color: #EB6440;
+  color: #eb6440;
 }
 
-.result-label, .text-label{
+.result-label,
+.text-label {
   text-align: center;
   font-family: viga;
   font-size: 36;
-  color: #EB6440;
+  color: #eb6440;
 }
 
-label.keylabel{
+label.keylabel {
   font-family: oxyR;
   color: #497174;
   font-size: 24px;
@@ -83,33 +86,31 @@ textarea {
   outline: none;
 }
 
-
-.key{
+.key {
   margin-top: 10px;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   height: 60px;
   width: 80%;
   padding: 6px 10px;
   box-sizing: border-box;
-  border: 2px solid #D6E4E5;
+  border: 2px solid #d6e4e5;
   border-radius: 20px;
   background-color: #ffff;
   font-size: 16px;
   text-transform: uppercase;
-  box-shadow: inset 2px 2px 5px #D6E4E5, inset 2px 2px 4px #4b4b4b;
+  box-shadow: inset 2px 2px 5px #d6e4e5, inset 2px 2px 4px #4b4b4b;
   transition: all 0.2s ease-in-out;
   appearance: none;
   -webkit-appearance: none;
   outline: none;
 }
 
-.key:hover{
-  box-shadow:  inset 1px 1px 2px #D6E4E5, inset -1px -1px 2px #D6E4E5;
+.key:hover {
+  box-shadow: inset 1px 1px 2px #d6e4e5, inset -1px -1px 2px #d6e4e5;
 }
 
-
-.wrapper{
+.wrapper {
   display: inline-flex;
   background: #497174;
   height: 50px;
@@ -118,9 +119,9 @@ textarea {
   justify-content: space-evenly;
   border-radius: 25px;
   padding: 2px;
-  box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
-.wrapper .option{
+.wrapper .option {
   background: #fff;
   height: 100%;
   width: 50%;
@@ -128,7 +129,7 @@ textarea {
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
-  
+
   /* margin: 10px; */
   border-radius: 25px;
   cursor: pointer;
@@ -137,14 +138,14 @@ textarea {
   transition: all 0.3s ease;
 }
 
-.wrapper .option .dot{
+.wrapper .option .dot {
   height: 20px;
   width: 20px;
   background: #d9d9d9;
   border-radius: 50%;
   position: relative;
 }
-.wrapper .option .dot::before{
+.wrapper .option .dot::before {
   position: absolute;
   content: "";
   top: 4px;
@@ -157,49 +158,49 @@ textarea {
   transform: scale(1.5);
   transition: all 0.3s ease;
 }
-input[type="radio"]{
+input[type="radio"] {
   display: none;
 }
 .encryptInput:checked:checked ~ .encrypt,
-.decryptInput:checked:checked ~ .decrypt{
+.decryptInput:checked:checked ~ .decrypt {
   border-color: #497174;
   background: #497174;
 }
 .encryptInput:checked:checked ~ .encrypt .dot,
-.decryptInput:checked:checked ~ .decrypt .dot{
+.decryptInput:checked:checked ~ .decrypt .dot {
   background: #fff;
 }
 .encryptInput:checked:checked ~ .encrypt .dot::before,
-.decryptInput:checked:checked ~ .decrypt .dot::before{
+.decryptInput:checked:checked ~ .decrypt .dot::before {
   opacity: 1;
   transform: scale(1);
 }
-.wrapper .option span{
+.wrapper .option span {
   font-size: 20px;
   color: #808080;
 }
 .encryptInput:checked:checked ~ .encrypt span,
-.decryptInput:checked:checked ~ .decrypt span{
+.decryptInput:checked:checked ~ .decrypt span {
   color: #fff;
 }
 
 /* Setting Button */
 
-.btn-input{
+.btn-input {
   margin: 20px auto;
   margin-top: 50px;
   width: 80%;
   padding: 10px;
   border: #fff;
   border-radius: 30px;
-  color:#fff;
-  background-color:#497174;
+  color: #fff;
+  background-color: #497174;
   font-weight: bold;
-  box-shadow: -5px -5px 20px white,  5px 5px 20px #497174;
+  box-shadow: -5px -5px 20px white, 5px 5px 20px #497174;
   cursor: pointer;
 }
-.btn-input:hover{
-  box-shadow: -2px -2px 5px white, 2px 2px 5px #BABECC;
+.btn-input:hover {
+  box-shadow: -2px -2px 5px white, 2px 2px 5px #babecc;
 }
 
 .resultBox label {
@@ -228,26 +229,52 @@ a {
   font-family: viga;
 }
 
-.underline{
+.underline {
   position: relative;
   width: fit-content;
   margin: auto;
   text-decoration: none;
 }
 
-.underline::before{
-  content: '';
+.underline::before {
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
   width: 0;
   height: 2px;
-  background-color: #0074D9;
+  background-color: #0074d9;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+.footer {
+  padding-top: 10px;
+  font-family: viga;
+  width: 100%; /* Height of the footer */
+  background-color: #cae1e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.footer ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+
+.footer ul li {
+  width: 400px;
+  text-align: center;
+  list-style-type: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
-  .underline:hover::before{
+  .underline:hover::before {
     left: 0;
     right: auto;
     width: 100%;
@@ -262,61 +289,75 @@ a {
     align-items: center;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 20px!important;
+    margin-bottom: 20px !important;
+
   }
   .text {
     width: 70vw;
-    margin: 0!important;
-    padding: 0!important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   .key-container {
-    display: block!important;
+    display: block !important;
     box-sizing: content-box;
-    width: 100vw!important;
+    width: 100vw !important;
+    padding-right: 0!important;
   }
   .key-box {
     width: 80vw;
     margin: auto;
   }
-
+  .row{
+    width: 100vw;
+  }
+  
   .key {
     margin: auto;
   }
   .result-box {
     width: 100vw;
     margin: auto;
-    margin-bottom: 20px!important;
+    margin-bottom: 20px !important;
   }
 
-  .result-box textarea{
+  .result-box textarea {
     width: 70vw;
-    padding: 12px!important;
+    padding: 12px !important;
     resize: none;
-    height: 100px!important;
+    height: 100px !important;
   }
   .result-box label {
     display: block;
   }
-  .text-label{
-    display: block!important;
+  .text-label {
+    display: block !important;
     width: 100vw;
   }
   .text-box {
-    display: block!important;
+    display: block !important;
     box-sizing: content-box;
     width: 100vw;
     margin: auto;
   }
 
-  .text-box textarea{
+  .text-box textarea {
     width: 70vw;
-    margin: auto!important;
-    padding: 12px!important;
+    margin: auto !important;
+    padding: 12px !important;
     resize: none;
-    height: 100px!important;
+    height: 100px !important;
   }
 
-  .judul{
+  .judul {
     margin: auto;
+  }
+
+  .footer ul {
+    flex-direction: column;
+  }
+
+  .col-6{
+    padding: 0!important;
+    margin: 0!important;
   }
 }
